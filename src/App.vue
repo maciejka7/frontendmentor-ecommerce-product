@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import Navigation from "./components/Navigation.vue";
 </script>
 
 <template>
@@ -8,9 +8,10 @@ import HelloWorld from "./components/HelloWorld.vue";
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
-      <router-link to="/profile">Profile</router-link>
-      <router-link to="cart">Cart</router-link>
+      <RouterLink to="/profile">Profile</RouterLink>
+      <RouterLink to="cart">Cart</RouterLink>
     </nav>
+    <Navigation />
   </header>
 
   <RouterView />
