@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import Navigation from "./components/Navigation.vue";
+import MainNavigation from "./components/MainNavigation.vue";
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import Navigation from "./components/Navigation.vue";
       <RouterLink to="/profile">Profile</RouterLink>
       <RouterLink to="cart">Cart</RouterLink>
     </nav>
-    <Navigation />
+    <MainNavigation />
   </header>
 
   <RouterView />
