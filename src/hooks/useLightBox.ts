@@ -26,7 +26,6 @@ export const useLightBox = (items: string[]) => {
 
   const lastItemIndex = items.length - 1;
   const firstItemIndex = 0;
-  console.log(lastItemIndex);
 
   return {
     handleNextImage,
