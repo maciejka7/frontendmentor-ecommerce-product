@@ -24,8 +24,20 @@ export const products: Product[] = [
   },
 ];
 
-export const getProducts = async (): Promise<Product[]> => {
+export type GetProductsConfig = {
+  mockError: boolean;
+};
+
+export const getProducts = async (
+  config?: GetProductsConfig
+): Promise<Product[]> => {
   return new Promise((resolve, reject) => {
+    if (config && config.mockError && config.mockError === true) {
+      setTimeout(() => {
+        reject({ error: { msg: "mocked error" } });
+      }, 1000);
+    }
+
     setTimeout(() => {
       resolve(products);
     }, 1000);

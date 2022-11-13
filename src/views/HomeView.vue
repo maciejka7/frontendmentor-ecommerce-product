@@ -9,7 +9,9 @@ import { useResolution } from "@/hooks/useResolution";
 import ProductCard from "@/components/ProductCard.vue";
 
 // Query
-const { isLoading, isError, data, error } = useQuery(["products"], getProducts);
+const { isLoading, isError, data, error } = useQuery(["products"], () =>
+  getProducts()
+);
 
 const { currentWindowWidth } = useResolution();
 </script>
@@ -19,7 +21,7 @@ const { currentWindowWidth } = useResolution();
     <p v-if="isLoading" class="flex align-middle justify-center">
       <LoadingSpinner />
     </p>
-    <p v-if="isError">ERROR !</p>
+    <p v-if="isError">ERROR ! {{ error }}</p>
 
     <div v-if="data">
       <MobileLightBox

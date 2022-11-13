@@ -14,7 +14,9 @@
       <p class="rounded bg-[#FCF1E8] text-primary font-bold px-1 mr-auto">
         {{ product.discount }}%
       </p>
-      <p class="text-gray-400 font-bold line-through">${{ product.basePrise.toFixed(2) }}</p>
+      <p class="text-gray-400 font-bold line-through">
+        ${{ product.basePrise.toFixed(2) }}
+      </p>
     </div>
   </div>
 </template>
